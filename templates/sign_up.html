@@ -1,5 +1,26 @@
-{% extends "base.html" %} {% block title %}sign-up{% endblock %}
-
+{% extends "base.html" %}
 {% block content %}
-<h1> sign-up page !!!</h1>
-{% endblock %}
+    <div class="form-box">
+        <legend style="color: white;">Sign Up</legend>
+        <form id="signupForm">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="	fas fa-user-circle"></i>
+                    <input type="text" placeholder="Name" name="name" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="input-field">
+                    <i class='fas fa-lock'></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <br />
+                <button type="submit" class="login-button">Log in</button>
+                <small class="forget-o">Forgot Password <a href="#">Click here</a></small>
+            </div>
+        </form>
+</div>
+
+{% endblock content %}

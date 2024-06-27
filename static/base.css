@@ -31,19 +31,19 @@ body {
     border-radius: 10px;
 }
 
-.form-box h1 {
+.form-box legend {
     font-size: 25px;
     margin-bottom: 40px;
     color: #ebe7f0;
     position: relative;
 }
 
-.form-box h1::after {
+.form-box legend::after {
     content: '';
     width: 40px;
     height: 3px;
     border-radius: 3px;
-    background: black;
+    background: white;
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -84,10 +84,10 @@ input {
 .nav-link {
     padding: 5px 10px;
     color: white;
-    background-color: grey;
+    /* background-color: grey; */
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 1s ease; /* more time to res */
     margin: 0 5px;
 }
 
@@ -99,13 +99,12 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 87%;
 }
-
 .login-button {
     width: 100%;
     padding: 10px;
-    background-color: darkgreen;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 25px;

@@ -27,7 +27,9 @@
 </head>
     <body>
       <div class="cont"></div>
+      
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a style="color: rgb(219, 219, 219)" class="navbar-brand mr-4" href="/">Task Space</a>
         <button
         class="navbar-toggler"
         type="button"
@@ -35,6 +37,7 @@
         data-target="#navbar"
       >
         <span class="navbar-toggler-icon"></span>
+        
       </button>
         <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
@@ -43,9 +46,36 @@
                 <a class="nav-item nav-link" id="login" href="/login">Login</a>
                 <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
             </div>
+            
         </div>
     </nav>
-          {% block content %} {% endblock %}
+
+    <!-- flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for message, category in messages %}
+        <!-- failed -->
+          {% if category == 'error' %}
+          <div class="alert alert-danger" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <!-- success -->
+           {% else %}
+          <div class="alert-success" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block content %} {% endblock %}
         </div>
         <script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
