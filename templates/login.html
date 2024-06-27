@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="form-box">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="	fas fa-user-circle"></i>
+                    <input type="text" placeholder="Name" name="name" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="input-field">
+                    <i class='fas fa-lock'></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <br />
+                <button type="submit" class="login-button">Log in</button>
+                <p class="forget-o">Forget password <a href="#">Click here</a></p>
+            </div>
+        </form>
+</div>
+
+{% endblock content %}
