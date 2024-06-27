@@ -76,16 +76,16 @@ def sign_up():
     first_name = request.form.get('first_name')
     password = request.form.get('password')
     password2 = request.form.get('password2')
-    if len(email) < 5:
-        flash('email must be greater than 5 characters', category='error')
-    elif len(first_name) < 2:
-        flash('your first name must be greater than 2 characters', category='error')
-    elif password != password2:
-        flash('Your passwords don\'t match', category='error')
-    elif len(password) < 8:
-        flash('Your password must be greater than 8 characters', category='error')
-    else:
-        flash('Account Created!', category='success')
+    # if len(email) < 5:
+    #     flash('email must be greater than 5 characters', category='error')
+    # elif len(first_name) < 2:
+    #     flash('your first name must be greater than 2 characters', category='error')
+    # elif password != password2:
+    #     flash('Your passwords don\'t match', category='error')
+    # elif len(password) < 8:
+    #     flash('Your password must be greater than 8 characters', category='error')
+    # else:
+    #     flash('Account Created!', category='success')
     return render_template("sign_up.html")
 
 
