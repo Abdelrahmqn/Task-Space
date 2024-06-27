@@ -26,7 +26,6 @@
         crossorigin="anonymous"></script>
 </head>
     <body>
-      <div class="cont"></div>
       
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a style="color: rgb(219, 219, 219)" class="navbar-brand mr-4" href="/">Task Space</a>
@@ -35,36 +34,36 @@
         type="button"
         data-toggle="collapse"
         data-target="#navbar"
-      >
+        >
         <span class="navbar-toggler-icon"></span>
         
       </button>
-        <div class="collapse navbar-collapse" id="navbar">
+      <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" id="home" href="/">Home</a>
                 <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
                 <a class="nav-item nav-link" id="login" href="/login">Login</a>
                 <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
-            </div>
+              </div>
             
-        </div>
+            </div>
     </nav>
-
+    
     <!-- flash -->
     {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
+    {% if messages %}
         {% for message, category in messages %}
         <!-- failed -->
-          {% if category == 'error' %}
-          <div class="alert alert-danger" role="alert">
-            {{ message }}
-            <button type="button" class="close" data-dismiss="alert">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
+        {% if category == 'error' %}
+        <div class="alert alert-danger" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
           <!-- success -->
-           {% else %}
+          {% else %}
           <div class="alert-success" role="alert">
             {{ message }}
             <button type="button" class="close" data-dismiss="alert">
@@ -72,10 +71,11 @@
             </button>
           </div>
           {% endif %}
-        {% endfor %}
-      {% endif %}
-    {% endwith %}
-    {% block content %} {% endblock %}
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+          <div class="cont"></div>
+          {% block content %} {% endblock %}
         </div>
         <script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -92,6 +92,6 @@
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
           crossorigin="anonymous"
     ></script>
-    </body>
-</html>
+  </body>
+  </html>
 
