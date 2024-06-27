@@ -33,7 +33,7 @@ body {
 
 .form-box legend {
     font-size: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #ebe7f0;
     position: relative;
 }
@@ -121,5 +121,5 @@ input {
     color: white;
 }
 .input-group-signup {
-    height: 15%;
+    height: 13%;
 }
